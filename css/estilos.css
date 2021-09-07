@@ -1,0 +1,247 @@
+@charset 'UTF-8';
+:root {
+  /*Paleta*/
+  --color-verde-claro: #726b5d;
+  --color-verde: #576050;
+  --color-crema-claro: #eeebe8;
+  --color-melon: #d6bba8;
+  --color-crema: #caa286;
+  --color-cafe: #9e6643;
+  --color-cafe-oscuro: #955b3e;
+  --color-naranja: #be6333;
+  /*Tipo*/
+  --prompt: "Prompt", sans-serif;
+  --syncopate: "Syncopate", sans-serif;
+  /*Misc*/
+  --transicion: all 0.5s ease;
+}
+
+h1,
+h2 {
+  font-family: var(--syncopate);
+  font-weight: 400;
+}
+
+/*
+======
+GENERALES
+======
+*/
+html {
+  font-size: 16px;
+}
+a {
+  transition: var(--transicion);
+}
+main > div,
+main > div {
+  position: relative;
+}
+
+.fondo-img,
+.fondo-blur {
+  position: absolute;
+  z-index: 1;
+}
+
+.fondo-img ~ * {
+  position: relative;
+  z-index: 2;
+}
+
+img {
+  max-width: 100%;
+}
+
+.well-form {
+  color: var(--color-crema-claro);
+}
+
+.well-form label,
+.well-form input,
+.well-form span {
+  display: block;
+  font-family: var(--prompt);
+}
+
+.well-form label {
+  margin-bottom: 4px;
+}
+
+.well-form span {
+  font-size: 0.875rem;
+  margin: 4px 0 0;
+  color: var(--color-crema);
+  opacity: 0;
+  transition: var(--transicion);
+}
+
+.well-form input:focus + span {
+  opacity: 1;
+}
+
+.well-form input,
+.well-form input:focus {
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+}
+
+.well-form label + input {
+  padding: 4px 8px;
+  margin: 0;
+  width: 100%;
+  border: 1px solid var(--color-crema);
+  color: var(--color-crema-claro);
+}
+
+.btn {
+  border: none;
+  font-family: var(--syncopate) !important;
+  font-weight: 700;
+  border-radius: 0;
+  text-align: center;
+  padding: 12px 24px 8px;
+  line-height: 2;
+  transition: var(--transicion);
+}
+
+/*
+======
+LOGIN
+======
+*/
+/*Fila 1*/
+#well-fila-login {
+  background-color: var(--color-cafe);
+  padding: 120px 0;
+}
+
+#well-fila-login h1 {
+  font-size: 1.5rem;
+}
+
+#well-fila-login .fondo-img {
+  background: url(../img/textura-ondas@2x.png);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  opacity: 0.4;
+}
+
+#well-fila-login img {
+  display: block;
+  margin: 0 auto;
+  width: 295px;
+}
+
+#well-fila-login .btn {
+  background-color: var(--color-melon);
+  color: var(--color-cafe);
+  margin-top: 8px;
+  width: 100%;
+}
+
+#well-fila-login .btn:hover {
+  background-color: var(--color-crema-claro);
+}
+
+#well-fila-login h1 {
+  color: var(--color-crema-claro);
+  margin-bottom: 30px;
+}
+
+/*Fila 2*/
+#well-fila-banner {
+  background: url(../img/fondo-login-banner.jpg) no-repeat center;
+  background-size: cover;
+  color: var(--color-crema-claro);
+}
+
+#well-fila-banner h2 {
+  font-size: 1rem;
+  line-height: 2;
+  padding: 90px 0;
+}
+
+#well-fila-banner .fondo-blur {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  opacity: 0.8;
+  backdrop-filter: blur(5px);
+}
+
+#well-fila-banner .fondo-img {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  opacity: 0.5;
+  background-color: var(--color-verde-claro);
+}
+
+/*Footer*/
+/*Footer*/
+#cont-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.col-logos * {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.col-logos span {
+  color: #617451;
+  font-size: 14px;
+}
+
+#cont-footer .col-redes a {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  font-family: var(--syncopate);
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: var(--color-naranja);
+}
+#cont-footer .col-redes a:hover {
+  color: var(--color-cafe);
+}
+#cont-footer .col-redes br {
+  display: none;
+}
+#copyright {
+  border-top: 1px solid #707070;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+}
+#copyright p {
+  text-align: left;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #707070;
+  width: 80%;
+}
+#copyright a {
+  font-size: 0.75rem;
+  min-width: 180px;
+  display: block;
+  width: 20%;
+  padding-left: 30px;
+  text-decoration: none;
+  color: #707070;
+  text-align: right;
+}
+#copyright a:hover {
+  color: var(--color-naranja);
+}
