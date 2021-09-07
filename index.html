@@ -20,6 +20,10 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#717363" />
     <meta name="msapplication-TileColor" content="#717363" />
     <meta name="theme-color" content="#ffffff" />
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -36,7 +40,7 @@
   <body>
     <header id="well-header">
       <div class="container-xxl">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col">
             <a href="index.html" id="logo"><img src="img/logo-well.svg" alt="Well" /></a>
           </div>
@@ -49,8 +53,8 @@
         <div class="fondo-img"></div>
         <div class="container-xxl">
           <div class="row">
-            <div class="col-2-xl"><p class="grande">¡Bienvenidos!</p></div>
-            <div class="col-10-xl">
+            <div class="col-xl-1"><p class="grande">¡Bienvenidos!</p></div>
+            <div class="col-xl-10">
               <div style="padding: 56.25% 0 0 0; position: relative">
                 <iframe
                   src="https://player.vimeo.com/video/293438220?h=b5c09b6116&autoplay=1&title=0&byline=0&portrait=0"
@@ -64,23 +68,35 @@
             </div>
           </div>
           <div class="row">
-            <div class="offset-xl-2 col-xl-5 col-6"><h1>Evento de lanzamiento para inversionistas</h1></div>
-            <div class="col-xl-5 col-6"><p>400 invitados</p></div>
+            <div class="offset-xl-1 col-xl-7 col-6"><h1>Evento de lanzamiento para inversionistas</h1></div>
+            <div class="col-xl-3 col-6"><p>400 invitados</p></div>
           </div>
         </div>
       </div>
       <div id="well-fila-galeria">
-        <div class="galeria-slick">
-          <div>your content</div>
-          <div>your content</div>
-          <div>your content</div>
+        <div class="galeria-slick" data-slick='{"slidesToShow": 3, "centerMode": true, "variableWidth": true, "autoplay": true, "arrows": false}'>
+          <div><img src="img/gal-1.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-2.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-3.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-4.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-5.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-6.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-7.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-8.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-9.jpg" alt="Well 100"></div>
+          <div><img src="img/gal-10.jpg" alt="Well 100"></div>
         </div>
       </div>
       <div id="well-fila-brochure">
         <div class="container-xxl">
-          <div class="row">
-            <div class="offset-xl-1 col-xl-5"></div>
-            <div class="col-xl-5">
+          <div class="row align-items-center">
+            <div class="offset-xl-1 col-xl-5">
+              <div class="galeria-slick" data-slick='{"slidesToShow": 1, "centerMode": true, "autoplay": true, "fade": true}'>
+                <div><img src="img/gal-planta-1.png" alt="Well 100"></div>
+                <div><img src="img/gal-planta-2.png" alt="Well 100"></div>
+              </div>
+            </div>
+            <div class="offset-xl-1 col-xl-5">
               <h2>Apartamentos</h2>
               <p>Pronto podrás reservar el tuyo</p>
               <a href="#" class="btn">Ver brochure</a>
@@ -88,43 +104,132 @@
           </div>
         </div>
       </div>
-      <div id="well-fila-listados"></div>
+      <div id="well-fila-listados">
+        <div class="container-xxl">
+          <div class="row align-items-center">
+            <div class="col-6">
+              <h4><span>45</span> Apartamentos disponibles </h4>
+            </div>
+            <div class="col-6">
+              
+              <div class="custom-select">
+                <select>
+                  <option value="0">Ordenar por:</option>
+                  <option value="1">Precio mayor a menor</option>
+                  <option value="2">Precio menor a mayor</option>
+                  <option value="3">Número de habitaciones</option>
+                  <option value="4">Área mayor a menor</option>
+                  <option value="5">Área menor a mayor</option>
+                </select>
+              </div>
+              
+            </div>
+          </div>
+          <!--Fila Apto-->
+          <div class="row align-items-center fila-apto">
+            <a href="#" class="enlace-apto"></a>
+            <div class="col-lg-2 offset-lg-1">
+              <h3 class="tit-apto"><small>Aptos</small>Tipo 1</h3>
+            </div>
+            <div class="col-lg-3">
+              <img src="img/dummy-mini-apto.png" alt="Planta Apartamento">
+            </div>
+            <div class="col-lg-2">
+              <p class="area-outer"><strong><span class="area">60.50</span> m<sup>2</sup></strong></p>
+              <p class="habitacion">2 habitaciones</p>
+              <p class="pisos">Piso 2 a piso 6</p>
+            </div>
+            <div class="col-lg-3">
+              <span class="valor">$205.000.000</span>
+              <span class="flecha"><span class="linea"></span><span class="punta"></span></span>
+            </div>
+          </div>
+          <!-- / Fila Apto-->
+          <!--Fila Apto-->
+          <div class="row align-items-center fila-apto">
+            <a href="#" class="enlace-apto"></a>
+            <div class="col-lg-2 offset-lg-1">
+              <h3 class="tit-apto"><small>Aptos</small>Tipo 2</h3>
+            </div>
+            <div class="col-lg-3">
+              <img src="img/dummy-mini-apto.png" alt="Planta Apartamento">
+            </div>
+            <div class="col-lg-2">
+              <p class="area-outer"><strong><span class="area">60.50</span> m<sup>2</sup></strong></p>
+              <p class="habitacion">2 habitaciones</p>
+              <p class="pisos">Piso 2 a piso 6</p>
+            </div>
+            <div class="col-lg-3">
+              <span class="valor">$205.000.000</span>
+              <span class="flecha"><span class="linea"></span><span class="punta"></span></span>
+            </div>
+          </div>
+          <!-- / Fila Apto-->
+          <!--Fila Apto-->
+          <div class="row align-items-center fila-apto">
+            <a href="#" class="enlace-apto"></a>
+            <div class="col-lg-2 offset-lg-1">
+              <h3 class="tit-apto"><small>Aptos</small>Tipo 3</h3>
+            </div>
+            <div class="col-lg-3">
+              <img src="img/dummy-mini-apto.png" alt="Planta Apartamento">
+            </div>
+            <div class="col-lg-2">
+              <p class="area-outer"><strong><span class="area">60.50</span> m<sup>2</sup></strong></p>
+              <p class="habitacion">2 habitaciones</p>
+              <p class="pisos">Piso 2 a piso 6</p>
+            </div>
+            <div class="col-lg-3">
+              <span class="valor">$205.000.000</span>
+              <span class="flecha"><span class="linea"></span><span class="punta"></span></span>
+            </div>
+          </div>
+          <!-- / Fila Apto-->
+      </div>
     </main>
     <footer id="well-footer">
-      <div id="cont-footer">
-        <div class="col-logos">
-          <img alt="Alianza Fiduciaria" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-alianza-alt.png" /><noscript
-            ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-alianza-alt.png" alt="Alianza Fiduciaria" /></noscript
-          ><span>Fiduciaria</span>
-        </div>
-        <div class="col-logos">
-          <img alt="DOM Real Estate" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-dom.png" /><noscript
-            ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-dom.png" alt="DOM Real Estate" /></noscript
-          ><span>Gerencia y ventas</span>
-        </div>
-        <div class="col-logos">
-          <img alt="Urbanum" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-urbanum.png" /><noscript
-            ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-urbanum.png" alt="Urbanum" /></noscript
-          ><span>Gerencia y ventas</span>
-        </div>
-        <div class="col-logos">
-          <img alt="IC" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-ic.png" /><noscript
-            ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-ic.png" alt="IC" /></noscript
-          ><span>Construcción</span>
-        </div>
-        <div class="col-redes">
-          <a href="https://www.facebook.com/Well100-101607942237910/" target="_blank">Facebook</a><br />
-          <a href="" target="_blank">Instagram</a>
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col" id="cont-footer">
+            <div class="col-logos">
+              <img alt="Alianza Fiduciaria" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-alianza-alt.png" /><noscript
+                ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-alianza-alt.png" alt="Alianza Fiduciaria" /></noscript
+              ><span>Fiduciaria</span>
+            </div>
+            <div class="col-logos">
+              <img alt="DOM Real Estate" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-dom.png" /><noscript
+                ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-dom.png" alt="DOM Real Estate" /></noscript
+              ><span>Gerencia y ventas</span>
+            </div>
+            <div class="col-logos">
+              <img alt="Urbanum" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-urbanum.png" /><noscript
+                ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-urbanum.png" alt="Urbanum" /></noscript
+              ><span>Gerencia y ventas</span>
+            </div>
+            <div class="col-logos">
+              <img alt="IC" class="lazyloaded" src="http://well100.com.co/wp-content/uploads/2021/08/logo-ic.png" /><noscript
+                ><img src="http://well100.com.co/wp-content/uploads/2021/08/logo-ic.png" alt="IC" /></noscript
+              ><span>Construcción</span>
+            </div>
+            <div class="col-redes">
+              <a href="https://www.facebook.com/Well100-101607942237910/" target="_blank">Facebook</a><br />
+              <a href="" target="_blank">Instagram</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="copyright">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
-          sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-        </p>
-        <a href="#">Politica de privacidad</a>
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col" id="copyright">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+              error.
+            </p>
+            <a href="#">Politica de privacidad</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
