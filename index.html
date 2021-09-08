@@ -237,7 +237,96 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          
+          <div class="apto-detalle-f1">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="row apto-detalle-header">
+                  <div class="col"><h3 class="tit-apto"><small>Aptos</small>Tipo 3</h3></div>
+                  <div class="col">
+                    <div class="custom-select">
+                      <select>
+                        <option value="0">Selecciona un piso</option>
+                        <option value="piso2">Piso 2</option>
+                        <option value="piso3">Piso 3</option>
+                        <option value="piso4">Piso 4</option>
+                        <option value="piso5">Piso 5</option>
+                        <option value="piso6">Piso 6</option>
+                        <option value="piso7">Piso 7</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="apto-detalle-disponible">
+                  <p><strong>3 Disponibles</strong> • 4 reservados</p>
+                </div>
+                <div class="apto-detalle-areas">
+                  <p class="area-construida"><strong>Área total construida: <span class="area">60.50</span> m<sup>2</sup></strong></p>
+                  <p class="area-privada">Área privada: <span>50.50</span> m<sup>2</p>
+                  <p class="area-balcon">Área balcón: <span>10.50</span> m<sup>2</p>
+                </div>
+                <ul class="apto-detalle-caracteristicas">
+                  <li>1 salón</li>
+                  <li>Dormitorio</li>
+                  <li>Dormitorio</li>
+                  <li>Dormitorio</li>
+                  <li>Dormitorio</li>
+                  <li>Dormitorio</li>
+                </ul>
+                <div class="apto-detalle-img-piso">
+                  <img src="img/dummy-piso@2x.png" alt="Ubicación en piso">
+                </div>
+              </div>
+              <div class="col-lg-6 offset-lg-1">
+                <div class="apto-detalle-planta-outer">
+                  <div class="galeria-slick apto-detalle-planta" data-slick='{"slidesToShow": 1, "infinite": false, "arrows": true, "lazyLoad": "progressive"}'>
+                    <div><img src="img/dummy-planta-apto.png" alt="Planta Apartamento"></div>
+                    <div><img src="img/dummy-apto-gal2.jpg" alt="Well 100"></div>
+                    <div><img src="img/dummy-apto-gal3.png" alt="Well 100"></div>
+                  </div>
+                </div>
+                <p class="apto-detalle-valor">$250.000.000</p>
+                <p class="apto-detalle-cuotas">30% de cuota inicial <br>26 cuotas mensuales de: <strong>$2.884.615</strong> <span></span></p>
+                <div class="row">
+                  <div class="col">
+                    <div class="custom-select seleccionar-apto">
+                      <select>
+                        <option value="0">Selecciona un apto</option>
+                        <option value="apto202">202</option>
+                        <option value="apto203">203</option>
+                        <option value="apto204">204</option>
+                        <option value="apto205">205</option>
+                        <option value="apto206">206</option>
+                        <option value="apto207">207</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#modal-reserva">Reservar</a>
+                  </div>
+                </div>
+                <div class="apto-detalle-termino">
+                  <a href="" target="_blank">Términos de la reserva</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="apto-detalle-f2">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="galeria-slick" data-slick='{"slidesToShow": 3,  "variableWidth": true, "autoplay": true, "arrows": false}'>
+                  <div><img src="img/gal-apto1.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
+                  <div><img src="img/gal-apto2.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
+                  <div><img src="img/gal-apto3.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
+                  <div><img src="img/gal-apto4.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
+                  <div><img src="img/gal-apto5.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -250,8 +339,10 @@
     ></script>
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js" integrity="sha512-iSVaq9Huv1kxBDAOH7Il1rwIJD+uspMQC1r4Y73QquhbI2ia+PIXUoS5rBjWjYyD03S8t7gZmON+Dk6yPlWHXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
       $(".galeria-slick").slick();
+      
     </script>
     <script src="js/scripts.js"></script>
   </body>

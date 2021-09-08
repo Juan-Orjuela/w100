@@ -303,6 +303,10 @@ img {
   border-right: none;
   margin-left: 2px;
 }
+.slick-arrow.slick-disabled {
+  visibility: hidden;
+  opacity: 0;
+}
 /*
 ======
 LOGIN
@@ -568,7 +572,7 @@ Home
   background: white;
 }
 #well-fila-brochure .slick-arrow:hover:before {
-  border-color: var(--color-verde-oscuro);
+  border-color: var(--color-verde);
 }
 /*Modal*/
 .come-from-modal.left .modal-dialog,
@@ -600,4 +604,66 @@ Home
 
 .come-from-modal.right.show .modal-dialog {
   transform: translateX(0);
+}
+#modal-apto-detalle .modal-dialog, #modal-apto-detalle .modal-content {
+  background-color: var(--color-crema-claro);
+  border: none
+}
+.apto-detalle-planta img {
+  min-height: 20px;
+  width: 800px;
+  height: auto;
+}
+.apto-detalle-planta .slick-arrow,
+.apto-detalle-planta .slick-arrow:before {
+  border-color: var(--color-verde)
+}
+.apto-detalle-planta .slick-arrow:hover {
+  background-color: var(--color-verde);
+}
+.apto-detalle-planta .slick-arrow:hover:before {
+  border-color: white;
+}
+#modal-apto-detalle .modal-content > div {
+  padding: 40px 60px;
+}
+#modal-apto-detalle h3 {
+  margin: 0;
+}
+.apto-detalle-f1 {
+  color: var(--color-cafe)
+}
+.apto-detalle-disponible {
+  padding: 15px 0 20px;
+  border-bottom: 1px solid var(--color-cafe)
+}
+.apto-detalle-disponible p {
+  margin: 0
+}
+.apto-detalle-areas {
+  padding: 20px 0
+}
+.apto-detalle-areas p {
+  margin: 0;
+}
+.apto-detalle-areas .area-construida {
+  margin-bottom: 20px;
+}
+.apto-detalle-caracteristicas {
+  color: var(--color-verde);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.apto-detalle-caracteristicas li {
+  width: 50%;
+}
+.apto-detalle-img-piso img {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.apto-detalle-f2 {
+  background-color: var(--color-cafe)
 }
