@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#717363" />
     <meta name="msapplication-TileColor" content="#717363" />
     <meta name="theme-color" content="#ffffff" />
@@ -31,6 +31,8 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <!--Lightbox-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Slick-->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!--Estilos-->
@@ -103,6 +105,8 @@
             </div>
           </div>
         </div>
+        
+        
       </div>
       <div id="well-fila-listados">
         <div class="container-xxl">
@@ -236,7 +240,8 @@
     <div class="modal come-from-modal right" id="modal-apto-detalle" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span><span></span></button>
+          <div class="apto-detalle-wrapper">
           <div class="apto-detalle-f1">
           <div class="container">
             <div class="row">
@@ -274,21 +279,35 @@
                   <li>Dormitorio</li>
                 </ul>
                 <div class="apto-detalle-img-piso">
-                  <img src="img/dummy-piso@2x.png" alt="Ubicación en piso">
+                  <a href="img/dummy-piso@2x.png" data-lightbox="ubicacion-en-piso">
+                    <img src="img/dummy-piso@2x.png" alt="Ubicación en piso">
+                  </a>
                 </div>
               </div>
               <div class="col-lg-6 offset-lg-1">
-                <div class="apto-detalle-planta-outer">
-                  <div class="galeria-slick apto-detalle-planta" data-slick='{"slidesToShow": 1, "infinite": false, "arrows": true, "lazyLoad": "progressive"}'>
-                    <div><img src="img/dummy-planta-apto.png" alt="Planta Apartamento"></div>
-                    <div><img src="img/dummy-apto-gal2.jpg" alt="Well 100"></div>
-                    <div><img src="img/dummy-apto-gal3.png" alt="Well 100"></div>
+                <div class="apto-detalle-planta">
+                  <div class="galeria-slick" data-slick='{"slidesToShow": 1, "infinite": false, "arrows": true, "variableWidth": true}'>
+                    <div>
+                      <a href="img/dummy-planta-apto.png" data-lightbox="galerias-planta-1">
+                        <img src="img/dummy-planta-apto.png" alt="Planta Apartamento">
+                      </a>
+                    </div>
+                    <div>
+                      <a href="img/dummy-apto-gal2.jpg" data-lightbox="galerias-planta-2">
+                        <div><img src="img/dummy-apto-gal2.jpg" alt="Well 100"></div>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="img/dummy-apto-gal3.png" data-lightbox="galerias-planta-3">
+                        <img src="img/dummy-apto-gal3.png" alt="Well 100">
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <p class="apto-detalle-valor">$250.000.000</p>
                 <p class="apto-detalle-cuotas">30% de cuota inicial <br>26 cuotas mensuales de: <strong>$2.884.615</strong> <span></span></p>
                 <div class="row">
-                  <div class="col">
+                  <div class="col-lg-5">
                     <div class="custom-select seleccionar-apto">
                       <select>
                         <option value="0">Selecciona un apto</option>
@@ -301,8 +320,8 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col">
-                    <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#modal-reserva">Reservar</a>
+                  <div class="col-lg-7">
+                    <a href="" class="btn btn-reservar" data-bs-toggle="modal" data-bs-target="#modal-reserva">Reservar</a>
                   </div>
                 </div>
                 <div class="apto-detalle-termino">
@@ -311,12 +330,12 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="apto-detalle-f2">
+          </div>
+          <div class="apto-detalle-f2">
           <div class="container">
             <div class="row">
               <div class="col">
-                <div class="galeria-slick" data-slick='{"slidesToShow": 3,  "variableWidth": true, "autoplay": true, "arrows": false}'>
+                <div class="galeria-slick" data-slick='{"slidesToShow": 3,  "variableWidth": true, "autoplay": true, "arrows": false, "loop": false}'>
                   <div><img src="img/gal-apto1.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
                   <div><img src="img/gal-apto2.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
                   <div><img src="img/gal-apto3.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
@@ -326,24 +345,35 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
         </div>
       </div>
     </div>
     <!-- / MODAL-->
+    <!-- jQuery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- Lightbox -->
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" 
+      integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" 
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
-
+    <!-- Slick -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js" integrity="sha512-iSVaq9Huv1kxBDAOH7Il1rwIJD+uspMQC1r4Y73QquhbI2ia+PIXUoS5rBjWjYyD03S8t7gZmON+Dk6yPlWHXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
       $(".galeria-slick").slick();
-      
+      lightbox.option({
+      'resizeDuration': 0,
+      'fadeDuration': 200
+    })
     </script>
+    <!-- Personalizados -->
     <script src="js/scripts.js"></script>
   </body>
 </html>
