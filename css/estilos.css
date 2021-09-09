@@ -249,7 +249,6 @@ img {
   top: 100%;
   left: -1px;
   right: -1px;
-
   z-index: 99;
   border: 1px solid var(--color-cafe);
   box-sizing: border-box;
@@ -582,12 +581,18 @@ Home
   border-color: var(--color-verde);
 }
 /*Modal*/
+#modal-apto-detalle .modal-dialog {
+  width: 70%;
+  max-width: 1440px;
+}
+#modal-reserva .modal-dialog {
+  width: 60%;
+  max-width: 480px;
+}
 .come-from-modal.left .modal-dialog,
 .come-from-modal.right .modal-dialog {
   position: fixed;
   margin: auto;
-  width: 70%;
-  max-width: 1440px;
   height: 100%;
   transform: translate3d(0%, 0, 0);
 }
@@ -606,9 +611,11 @@ Home
 .come-from-modal.right .modal-dialog {
   right: 0;
   transform: translateX(100%);
-  transition: opacity 0.3s linear, transform 0.7s ease-out;
+  transition: opacity 0.3s linear, transform 0.7s cubic-bezier(0, 0, 0.2, 1);
 }
-
+#modal-reserva.come-from-modal.right .modal-dialog {
+  transition: opacity 0.3s linear, transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+}
 .come-from-modal.right.show .modal-dialog {
   transform: translateX(0);
 }
@@ -824,4 +831,79 @@ Home
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
+}
+/*Modal reserva*/
+#modal-reserva .modal-content {
+  border: none;
+  background-color: var(--color-verde);
+}
+#modal-reserva .btn-close span {
+  width: 12px;
+}
+#modal-reserva .btn-close span:first-child {
+  transform: translate(-8px, 4px) rotate(45deg);
+}
+#modal-reserva .btn-close span:last-child {
+  transform: translate(-8px, -4px) rotate(-45deg);
+}
+.modal-backdrop + .modal-backdrop {
+  z-index: 1056
+}
+.modal.show + .modal.show {
+  z-index: 1066
+}
+#modal-reserva .modal-content {
+  justify-content: center;
+}
+.reserva-form-outer {
+  padding: 30px;
+}
+.reserva-form-outer h3 {
+  font-family: var(--syncopate);
+  color: var(--color-crema-claro);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#modal-reserva .reserva-form-outer input,
+#modal-reserva .tipo-doc {
+  margin-bottom: 20px;
+}
+
+#modal-reserva .select-selected {
+  background-color: var(--color-verde);
+  color: var(--color-crema-claro);
+}
+#modal-reserva .select-items div,
+#modal-reserva .select-selected {
+  color: var(--color-crema-claro);
+  padding: 8px 16px;
+}
+
+#modal-reserva .select-items,
+#modal-reserva .custom-select {
+  border-color:  var(--color-crema);
+}
+#modal-reserva .select-items {
+  background-color: var(--color-verde);
+}
+#modal-reserva .select-selected:after {
+  border-color: var(--color-crema) transparent transparent transparent;
+}
+#modal-reserva .select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--color-crema) transparent;
+}
+#modal-reserva .well-form label + input {
+  padding: 8px 16px;
+}
+#modal-reserva .btn {
+  width: 100%;
+  max-width: 300px;
+  margin: 40px auto 0;
+  background: #9EA57E;
+  color: var(--color-crema-claro);
+}
+#modal-reserva .btn:hover {
+  background-color: var(--color-crema-claro);
+  color: var(--color-verde);
 }

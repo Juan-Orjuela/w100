@@ -236,7 +236,7 @@
         </div>
       </div>
     </footer>
-    <!--MODAL-->
+    <!--MODAL APTO DETALLE-->
     <div class="modal come-from-modal right" id="modal-apto-detalle" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -350,7 +350,36 @@
         </div>
       </div>
     </div>
-    <!-- / MODAL-->
+    <!-- / MODAL APTO DETALLE-->
+    <!-- MODAL RESERVA-->
+    <div class="modal come-from-modal right" id="modal-reserva" tabindex="2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span><span></span></button>
+          <div class="reserva-form-outer">
+            <h3>Completa tu reserva</h3>
+              <form class="well-form" id="form-login" action="">
+                <label for="nombre-reserva">Nombre completo</label>
+                <input id="nombre-reserva" type="text" required/>
+                <label for="correo-reserva">Correo electrónico</label>
+                <input id="correo-reserva" type="email" required/>
+                <label for="tipo-doc-reserva">Tipo de documento</label>
+                <div class="custom-select tipo-doc">
+                  <select id="tipo-doc-reserva" required>
+                    <option value="0">Selecciona una opción</option>
+                    <option value="apto202">Cédula de ciudadanía</option>
+                    <option value="apto203">Cédula de extranjería</option>
+                    <option value="apto204">Pasaporte</option>
+                  </select>
+                </div>
+                <label for="identificacion-reserva">Número de documento</label>
+                <input id="identificacion-reserva" type="text" required/>
+                <input class="btn" type="submit" value="Enviar" />
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
     <!-- jQuery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <!-- Lightbox -->
