@@ -83,3 +83,16 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+//FORMULARIO DE RESERVA
+var modalReserva = document.getElementById("modal-reserva");
+document.getElementById("form-reserva").addEventListener("submit", (event) => {
+  modalReserva.classList.add("reservado");
+  event.preventDefault();
+});
+modalReserva.addEventListener("hidden.bs.modal", function (event) {
+  modalReserva.classList.remove("reservado");
+});
+document.getElementById("btn-vivo").addEventListener("click", (event) => {
+  event.preventDefault();
+  document.getElementById("vivo-outer").classList.toggle("activo");
+});

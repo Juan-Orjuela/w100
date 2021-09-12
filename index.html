@@ -335,7 +335,7 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <div class="galeria-slick" data-slick='{"slidesToShow": 3,  "variableWidth": true, "autoplay": true, "arrows": false, "loop": false}'>
+                <div class="galeria-slick" data-slick='{"slidesToShow": 1,  "variableWidth": true, "autoplay": true, "arrows": true, "infinite": false}'>
                   <div><img src="img/gal-apto1.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
                   <div><img src="img/gal-apto2.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
                   <div><img src="img/gal-apto3.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
@@ -358,7 +358,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span><span></span></button>
           <div class="reserva-form-outer">
             <h3>Completa tu reserva</h3>
-              <form class="well-form" id="form-login" action="">
+              <form class="well-form" id="form-reserva" >
                 <label for="nombre-reserva">Nombre completo</label>
                 <input id="nombre-reserva" type="text" required/>
                 <label for="correo-reserva">Correo electrónico</label>
@@ -377,8 +377,79 @@
                 <input class="btn" type="submit" value="Enviar" />
               </form>
           </div>
+          <div class="reserva-form-thankyou">
+            <h3>Gracias por tu reserva</h3>
+            <img src="img/img-thankyou@2x.png" alt="Gracias por tu reserva">
+          </div>
           </div>
         </div>
+      </div>
+      <!--RESERVAS EN VIVO-->
+      <div id="vivo-outer">
+        <a href="" id="btn-vivo">Reservas en vivo</a>
+        <div class="container">
+          <header class="row">
+            <div class="col">
+              <h2><strong>35</strong>apartamentos reservados</h2>
+            </div>
+          </header>
+          <main class="row">
+            <div class="col-6">
+              <h3>Apartamentos reservados</h3> 
+              <ul class="aptos">
+                <li><span class="tipo">Tipo 1</span><span class="numero">10</span></li>
+                <li><span class="tipo">Tipo 1B</span><span class="numero">10</span></li>
+                <li><span class="tipo">Tipo 2</span><span class="numero">10</span></li>
+                <li><span class="tipo">Tipo 2B</span><span class="numero">5</span></li>
+                <li><span class="tipo">Tipo 3</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo 3B</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo 1</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo 4</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo Sky Loft 1</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo Sky Loft 1B</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo Sky Loft 2</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo Sky Loft 2B</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo Sky Loft 3</span><span class="numero">0</span></li>
+                <li><span class="tipo">Tipo Sky Loft 3B</span><span class="numero">0</span></li>
+              </ul>
+            </div>
+          <div class="col-6">
+            <div class="galeria-slick" data-slick='{"slidesToShow": 1,  "variableWidth": true, "autoplaySpeed": 6000,"autoplay": true, "arrows": true, "infinite": false}'>
+              <div>
+                <div class="encabezado-galeria">
+                  <h4>
+                    <span class="tipo">Tipo 1</span> / Área total contruida: <span class="area">33.42</span> m<sup>2</sup>
+                  </h4>
+                  <p class="aptos-reservados"><span class="reservados">10</span> / <span class="totales">40</span></p>
+                </div>
+                <img src="img/dummy-galeria-vivo.png" alt="Apartamento Well 100">
+              </div>
+              <div>
+                <div class="encabezado-galeria">
+                  <h4>
+                    <span class="tipo">Tipo 1</span> / Área total contruida: <span class="area">33.42</span> m<sup>2</sup>
+                  </h4>
+                  <p class="aptos-reservados"><span class="reservados">10</span> / <span class="totales">40</span></p>
+                </div>
+                <img src="img/dummy-galeria-vivo.png" alt="Apartamento Well 100">
+              </div>
+              <div>
+                <div class="encabezado-galeria">
+                  <h4>
+                    <span class="tipo">Tipo 1</span> / Área total contruida: <span class="area">33.42</span> m<sup>2</sup>
+                  </h4>
+                  <p class="aptos-reservados"><span class="reservados">10</span> / <span class="totales">40</span></p>
+                </div>
+                <img src="img/dummy-galeria-vivo.png" alt="Apartamento Well 100">
+              </div>
+              
+            </div>
+          </div>
+        </main>
+          <footer class="row"><div class="col"> <p class="invitados"><span>400</span> invitados</p></div>
+          </footer>
+        </div>
+
       </div>
     <!-- jQuery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
