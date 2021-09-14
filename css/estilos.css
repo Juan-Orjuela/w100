@@ -1492,6 +1492,8 @@ RESPONSIVE
         position: absolute;
         top: 0;
         width: 645px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .apto-detalle-f2 img {
@@ -1634,7 +1636,7 @@ RESPONSIVE
     }
 
     .apto-detalle-planta {
-        margin-top: 60px;
+        margin: 60px auto 0;
     }
 
     .apto-detalle-header .col {
