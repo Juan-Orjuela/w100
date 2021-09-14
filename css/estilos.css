@@ -110,6 +110,7 @@ img {
 /*Footer*/
 #well-footer {
     background: var(--color-crema-claro);
+    border-top: 1px solid white;
 }
 
 #cont-footer {
@@ -646,7 +647,7 @@ Home
 }
 
 #modal-reserva .modal-dialog {
-    width: 60%;
+    width: 90%;
     max-width: 480px;
 }
 
@@ -1364,24 +1365,323 @@ RESPONSIVE
         padding: 0;
         text-align: left;
     }
+
     /*EN VIVO*/
     #vivo-outer {
-        height: initial;
-        min-height: 100%;
-        overflow: auto
+        top: 100%;
+        transform: translateY(0);
+        width: 100%;
+        height: calc(100% - 120px);
+        padding: 0;
+        left: 0;
+        max-width: initial;
     }
+
+    #vivo-outer.activo {
+        transform: translateY(0);
+        top: 120px;
+    }
+
+    #btn-vivo {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        transform-origin: right top;
+    }
+
+    #vivo-outer .container {
+        height: 100%;
+        overflow: auto;
+        max-width: initial;
+    }
+
+    #vivo-outer .container > .row {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    #vivo-outer .aptos {
+        flex-direction: row;
+    }
+
+    #vivo-outer .aptos li {
+        width: 33%;
+    }
+
     #vivo-outer main > .col-6 {
         width: 100%;
+    }
+
+    #vivo-outer .galeria-slick {
+        margin: 0 auto;
+    }
+
+    #vivo-outer .slick-slide, #vivo-outer .galeria-slick {
+        width: 400px;
+    }
+
+    /*HOME*/
+    #well-fila-video {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #well-fila-video .col-6 {
+        width: 100%;
+    }
+
+    #well-fila-video .row:last-child p {
+        text-align: left;
+        margin: 20px 0 0;
+    }
+
+    #well-fila-galeria img {
+        height: 50vw;
+    }
+
+    #well-fila-listados {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+
+    #well-fila-listados .custom-select {
+        margin-right: 0;
+    }
+
+    .fila-apto > div:first-of-type {
+        max-width: 180px;
+    }
+
+    .fila-apto > div {
+        width: 25%;
+    }
+
+    .fila-apto .valor {
+        font-size: 1.2rem;
+    }
+
+    .fila-apto .flecha {
+        display: none
+    }
+
+    /*DETALLE*/
+    #modal-apto-detalle .modal-dialog {
+        width: 100%;
+    }
+
+    .btn-close {
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        z-index: 9
+    }
+
+    .btn-close span {
+        width: 20px
+    }
+
+    .lb-data .lb-close {
+        width: 30px;
+        height: 30px;
+        right: 0;
+        top: -40px;
+    }
+
+    .apto-detalle-planta {
+        margin-top: 30px;
+        position: absolute;
+        top: 0;
+        width: 645px;
+    }
+
+    .apto-detalle-f2 img {
+        height: 50vw
+    }
+
+    .apto-detalle-f1 {
+        position: relative;
+        padding-top: 560px;
     }
 }
 
 /*SM ≥576px*/
 @media screen and (max-width: 768px) {
+    /*HOME*/ .fila-apto > div {
+        width: 33%;
+        padding: 0;
+    }
+
+    .fila-apto > div:last-child {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .fila-apto .valor {
+        font-size: 1.5rem;
+    }
+
+    .fila-apto .col-lg-3:nth-child(3) {
+    }
+
+    .fila-apto p {
+        margin: 0 0 0 auto !important;
+        width: 125px;
+    }
+
+    .fila-apto > div:first-of-type {
+        max-width: initial;
+    }
+
+    #well-fila-listados > div > .row:first-child h4 {
+        line-height: 1;
+        font-size: 1
+    }
+
+    /*DETALLE*/
+    .apto-detalle-f1 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 520px
+    }
+
+    .apto-detalle-planta, .apto-detalle-planta img {
+        width: 520px;
+    }
+
+    .apto-detalle-planta .galeria-slick {
+        width: calc(100%);
+    }
+
+    .apto-detalle-f2 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .btn-reservar {
+        margin-top: 40px
+    }
 }
 
 /*Xs <576px*/
 @media screen and (max-width: 576px) {
     /*LOGIN*/ #well-fila-login img {
         max-width: 80%
+    }
+
+    /*HOME*/
+    #well-header .col:last-child a {
+        font-size: .5rem;
+        line-height: 1;
+        letter-spacing: 0;
+    }
+
+    #well-fila-listados {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #well-fila-listados h4 {
+        text-align: center
+    }
+
+    #well-fila-listados .custom-select {
+        margin: 8px auto
+    }
+
+    #well-fila-listados .row:first-child > div {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 12px;
+    }
+
+    .fila-apto > div {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .fila-apto > div:last-child {
+        margin: 0;
+    }
+
+    .fila-apto p, .fila-apto h3, .fila-apto .valor {
+        margin: 0 auto!important;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        text-align: center;
+    }
+
+    /*EN VIVO*/
+    #vivo-outer .aptos li {
+        width: 50%;
+    }
+
+    #vivo-outer .aptos .tipo {
+        min-width: initial;
+        margin-right: 8px
+    }
+
+    /*DETALLE*/
+    .apto-detalle-f1 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 490px
+    }
+
+    .apto-detalle-planta, .apto-detalle-planta img {
+        width: 450px;
+    }
+
+    .apto-detalle-planta {
+        margin-top: 60px;
+    }
+
+    .apto-detalle-header .col {
+        width: 100%;
+        flex: initial;
+    }
+    /*RESERVA*/
+    #modal-apto-detalle .apto-detalle-header .tit-apto {
+        margin-bottom: 20px;
+    }
+
+    
+    #modal-reserva h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px
+    }
+    #modal-reserva .reserva-form-outer input, #modal-reserva .tipo-doc {
+    margin-bottom: 10px;
+}
+}
+
+@media screen and (max-width: 480px) {
+    #vivo-outer .slick-slide, #vivo-outer .galeria-slick {
+        width: 290px;
+    }
+
+    #vivo-outer .encabezado-galeria {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start
+    }
+
+    #vivo-outer .encabezado-galeria h4 {
+        margin-bottom: 10px;
+        padding-top: 4px;
+    }
+    /*DETALLE*/
+    .apto-detalle-f1 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 340px
+    }
+
+    .apto-detalle-planta, .apto-detalle-planta img {
+        width: 290px;
+    }
+    #form-reserva {
+        font-size: 0.9rem;
     }
 }
