@@ -1071,7 +1071,21 @@ Home
   background-color: var(--color-crema-claro);
   color: var(--color-verde);
 }
+.lockoff {
+  
+  
+  text-align: right;
+  display: block;
+  margin-bottom: 40px;
+}
+.lockoff p {
+  font-size: 1rem;
+  display: inline;
+  padding: 4px 12px;
+  background-color: var(--color-verde);
+    color: white;
 
+}
 /*Reservas en vivo*/
 #vivo-outer {
   position: fixed;
