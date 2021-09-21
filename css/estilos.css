@@ -506,7 +506,7 @@ Home
 
 .tit-apto {
   font-family: var(--syncopate);
-  font-size: 2rem;
+  font-size: 1.95rem;
 }
 
 .tit-apto small {
@@ -523,7 +523,11 @@ Home
   font-family: var(--syncopate);
   font-size: 1.5rem;
 }
-
+.fila-apto .valor span {
+  font-size: .75rem;
+  display: block;
+  
+}
 .fila-apto .area-outer {
   margin: 0;
 }
@@ -892,8 +896,31 @@ Home
 .lightboxOverlay {
   background-color: var(--color-crema-claro);
   opacity: 1;
+  position: fixed;
+  width: 100% !important;
+  height: 100% !important
 }
-
+.lightbox {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.lb-nav a.lb-prev {
+  background-image: url(../img/lb-prev@2x.png);
+  background-size: 50px;
+}
+.lb-nav a.lb-next {
+  background-image: url(../img/lb-next@2x.png);
+  background-size: 50px;
+}
+.lightbox .lb-number {
+  display: inline-block;
+  background: var(--color-verde);
+  padding: 4px 8px;
+  border: none;
+  color: white
+}
 .lb-outerContainer {
   background-color: var(--color-crema-claro);
   border-radius: 0;
@@ -1147,8 +1174,18 @@ Home
   background-color: var(--color-crema-claro);
   box-shadow: 0 0 0 4px var(--color-cafe) inset;
   animation: envivo 1s infinite ease alternate;
+  position: relative;
+  top: 2px;
 }
-
+.activo #btn-vivo {
+  background-color: var(--color-naranja)
+}
+.activo #btn-vivo:after {
+  box-shadow: none;
+  background: var(--color-naranja) url(../img/reservas-cerrar.svg) no-repeat center;
+  animation: none;
+  background-size: 8px;
+}
 #vivo-outer .row:first-child {
   border-bottom: 1px solid #c6caaf;
   padding: 20px 0;
@@ -1290,6 +1327,9 @@ RESPONSIVE
   #well-fila-listados .custom-select {
     margin-right: 40px;
   }
+  .tit-apto {
+    font-size: 1.65rem;
+  }
 }
 
 /*L ≥992px*/
@@ -1335,6 +1375,9 @@ RESPONSIVE
 
   #well-fila-brochure .btn {
     margin-top: 20px;
+  }
+  .tit-apto {
+    font-size: 1.35rem;
   }
 
   /*En VIVO*/
@@ -1658,7 +1701,9 @@ RESPONSIVE
     display: block;
     text-align: center;
   }
-
+.tit-apto {
+    font-size: 1.5rem;
+  }
   /*EN VIVO*/
   #vivo-outer .aptos li {
     width: 50%;
