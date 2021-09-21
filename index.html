@@ -57,14 +57,8 @@
           <div class="row">
             <div class="col-xl-1"><p class="grande">¡Bienvenidos!</p></div>
             <div class="col-xl-10">
-              <div style="padding: 56.25% 0 0 0; position: relative">
-                <iframe
-                  src="https://player.vimeo.com/video/293438220?h=b5c09b6116&autoplay=1&title=0&byline=0&portrait=0"
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+              <div id="cont-video" style="padding: 56.25% 0 0 0; position: relative">
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/4zAjvnMUEb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
@@ -94,17 +88,17 @@
           <div class="row align-items-center">
             <div class="offset-xl-1 col-xl-5">
               <div class="galeria-slick" data-slick='{"slidesToShow": 1, "centerMode": true, "autoplay": true, "fade": true}'>
-                <a href="img/well-galeria-plantas-inicio-planta-piso.jpg" data-lightbox="galerias-plantas-inicio">
-                  <img src="img/well-galeria-plantas-inicio-planta-piso.jpg" alt="Plantas Well 100">
+                <a href="img/well-galeria-plantas-inicio-planta-piso-tag.jpg" data-lightbox="galerias-plantas-inicio">
+                  <img src="img/well-galeria-plantas-inicio-planta-piso-tag.jpg" alt="Plantas Well 100">
                 </a>
-                <a href="img/well-galeria-plantas-inicio-piso-2al6.png" data-lightbox="galerias-plantas-inicio">
-                  <img src="img/well-galeria-plantas-inicio-piso-2al6.png" alt="Plantas Well 100">
+                <a href="img/well-galeria-plantas-inicio-piso-2al6-tag.png" data-lightbox="galerias-plantas-inicio">
+                  <img src="img/well-galeria-plantas-inicio-piso-2al6-tag.png" alt="Plantas Well 100">
                 </a>
-                <a href="img/well-galeria-plantas-inicio-piso-7.png" data-lightbox="galerias-plantas-inicio">
-                  <img src="img/well-galeria-plantas-inicio-piso-7.png" alt="Plantas Well 100">
+                <a href="img/well-galeria-plantas-inicio-piso-7-tag.png" data-lightbox="galerias-plantas-inicio">
+                  <img src="img/well-galeria-plantas-inicio-piso-7-tag.png" alt="Plantas Well 100">
                 </a>
-                <a href="img/well-galeria-plantas-inicio-terraza.png" data-lightbox="galerias-plantas-inicio">
-                  <img src="img/well-galeria-plantas-inicio-terraza.png" alt="Plantas Well 100">
+                <a href="img/well-galeria-plantas-inicio-terraza-tag.png" data-lightbox="galerias-plantas-inicio">
+                  <img src="img/well-galeria-plantas-inicio-terraza-tag.png" alt="Plantas Well 100">
                 </a>
               </div>
             </div>
@@ -328,8 +322,9 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-md-7">
+                  <div class="col-md-7 estado-reserva-constructora">
                     <a href="" class="btn btn-reservar" data-bs-toggle="modal" data-bs-target="#modal-reserva">Reservar</a>
+                    <p class="pre-reservado">Otro inversionista ya está reservando...</p>
                   </div>
                 </div>
                 <div class="apto-detalle-termino">
@@ -343,6 +338,7 @@
           <div class="container">
             <div class="row">
               <div class="col">
+                <p>Renders Generales - vista apartamentos</p>
                 <div class="galeria-slick" data-slick='{"slidesToShow": 1,  "variableWidth": true, "autoplay": true, "arrows": true, "infinite": false}'>
                   <div><img src="img/gal-apto1.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>
                   <div><img src="img/gal-apto2.jpg" alt="Apartamento Well 100"> <p class="descripcion">Lorem ipsum</p></div>

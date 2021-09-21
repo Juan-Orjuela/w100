@@ -490,7 +490,13 @@ Home
   font-size: 1.2rem;
   margin: 0;
 }
-
+#cont-video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .fila-apto {
   border-top: 1px solid var(--color-cafe);
   padding: 40px 0;
@@ -524,9 +530,8 @@ Home
   font-size: 1.5rem;
 }
 .fila-apto .valor span {
-  font-size: .75rem;
+  font-size: 0.75rem;
   display: block;
-  
 }
 .fila-apto .area-outer {
   margin: 0;
@@ -868,12 +873,25 @@ Home
   background: var(--color-verde);
   color: var(--color-crema-claro);
 }
-
+.estado-reserva-constructora .btn-reservar {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #c3c3c3;
+  color: #9c9c9c;
+}
 .apto-detalle-termino {
   text-align: right;
   margin-top: 20px;
 }
-
+.pre-reservado {
+  font-size: 0.875rem;
+  color: #9c9c9c;
+  text-align: center;
+  display: none;
+}
+.estado-reserva-constructora .pre-reservado {
+  display: block;
+}
 .apto-detalle-termino a {
   color: var(--color-cafe);
 }
@@ -898,7 +916,7 @@ Home
   opacity: 1;
   position: fixed;
   width: 100% !important;
-  height: 100% !important
+  height: 100% !important;
 }
 .lightbox {
   position: fixed;
@@ -919,7 +937,7 @@ Home
   background: var(--color-verde);
   padding: 4px 8px;
   border: none;
-  color: white
+  color: white;
 }
 .lb-outerContainer {
   background-color: var(--color-crema-claro);
@@ -1099,8 +1117,6 @@ Home
   color: var(--color-verde);
 }
 .lockoff {
-  
-  
   text-align: right;
   display: block;
   margin-bottom: 40px;
@@ -1110,8 +1126,7 @@ Home
   display: inline;
   padding: 4px 12px;
   background-color: var(--color-verde);
-    color: white;
-
+  color: white;
 }
 /*Reservas en vivo*/
 #vivo-outer {
@@ -1178,7 +1193,7 @@ Home
   top: 2px;
 }
 .activo #btn-vivo {
-  background-color: var(--color-naranja)
+  background-color: var(--color-naranja);
 }
 .activo #btn-vivo:after {
   box-shadow: none;
@@ -1701,7 +1716,7 @@ RESPONSIVE
     display: block;
     text-align: center;
   }
-.tit-apto {
+  .tit-apto {
     font-size: 1.5rem;
   }
   /*EN VIVO*/
